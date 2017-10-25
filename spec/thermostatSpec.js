@@ -22,7 +22,20 @@ describe('Thermostat', function () {
     expect(thermostat._temp).toEqual(17);
   });
 
-  it('has a minimum temperature', function () {
+  it('has a minimum temperature of 10 degrees', function () {
     expect(thermostat._minTemp).toEqual(10);
   });
+
+  it('starts with power save mode enabled', function () {
+    expect(thermostat._powerSaveMode).toBe(true)
+  });
+
+  it('has a maximum temperature of 25 degrees when in power save mode', function () {
+    expect(thermostat._maxTemp).toEqual(25)
+  })
+
+  it('has a maximum temperature of 32 degrees when not in power save mode', function () {
+    thermostat.turnOffPowerSaveMode()
+    expect(thermostat._maxTemp).toEqual(32)
+  })
 });
