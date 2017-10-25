@@ -13,12 +13,12 @@ describe('Thermostat', function () {
   });
 
   it('has a function to turn the temperature up', function () {
-    thermostat.turnUp();
-    expect(thermostat._temp).toEqual(21);
+    thermostat.turnUp(2);
+    expect(thermostat._temp).toEqual(22);
   });
 
   it('has a function to turn the temperature down', function () {
-    thermostat.turnDown();
-    expect(thermostat._temp).toEqual(19);
+    thermostat.turnDown(3);
+    expect(thermostat._temp).toEqual(17);
   });
 });
