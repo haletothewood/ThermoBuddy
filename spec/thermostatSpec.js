@@ -27,15 +27,21 @@ describe('Thermostat', function () {
   });
 
   it('starts with power save mode enabled', function () {
-    expect(thermostat._powerSaveMode).toBe(true)
+    expect(thermostat._powerSaveMode).toBe(true);
   });
 
   it('has a maximum temperature of 25 degrees when in power save mode', function () {
-    expect(thermostat._maxTemp).toEqual(25)
+    expect(thermostat._maxTemp).toEqual(25);
   })
 
   it('has a maximum temperature of 32 degrees when not in power save mode', function () {
-    thermostat.turnOffPowerSaveMode()
-    expect(thermostat._maxTemp).toEqual(32)
+    thermostat.turnOffPowerSaveMode();
+    expect(thermostat._maxTemp).toEqual(32);
+  })
+
+  it('has a reset button that resets the temperature to 20 degrees', function () {
+    thermostat.turnUp(4);
+    thermostat.reset();
+    expect(thermostat._temp).toEqual(20);
   })
 });
