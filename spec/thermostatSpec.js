@@ -21,4 +21,8 @@ describe('Thermostat', function () {
     thermostat.turnDown(3);
     expect(thermostat._temp).toEqual(17);
   });
+
+  it('has a minimum temperature', function () {
+    expect(thermostat._minTemp).toEqual(10);
+  });
 });
