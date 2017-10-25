@@ -34,8 +34,18 @@ describe('Thermostat', function () {
     expect(thermostat._maxTemp).toEqual(25);
   })
 
+  it('has a function to disable power save mode', function () {
+    thermostat.disablePowerSaveMode();
+    expect(thermostat._powerSaveMode).toBe(false)
+  })
+
+  it('has a function to enable power save mode', function () {
+    thermostat.enablePowerSaveMode();
+    expect(thermostat._powerSaveMode).toBe(true)
+  })
+
   it('has a maximum temperature of 32 degrees when not in power save mode', function () {
-    thermostat.turnOffPowerSaveMode();
+    thermostat.disablePowerSaveMode();
     expect(thermostat._maxTemp).toEqual(32);
   })
 

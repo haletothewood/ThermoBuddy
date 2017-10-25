@@ -20,6 +20,11 @@ Thermostat.prototype.disablePowerSaveMode = function () {
   this._powerSaveMode = false;
 };
 
+Thermostat.prototype.enablePowerSaveMode = function () {
+  this._maxTemp = 25;
+  this._powerSaveMode = true;
+};
+
 Thermostat.prototype.reset = function () {
   this._temp = 20;
 };
