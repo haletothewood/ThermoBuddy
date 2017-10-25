@@ -26,6 +26,10 @@ Thermostat.prototype.turnDown = function () {
   this._temp -= 1;
 };
 
+Thermostat.prototype.isPowerSaveModeOn = function() {
+  return this._powerSaveMode === true;
+}
+
 Thermostat.prototype.disablePowerSaveMode = function () {
   this._maxTemp = 32;
   this._powerSaveMode = false;

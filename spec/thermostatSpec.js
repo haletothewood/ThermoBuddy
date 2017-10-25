@@ -30,7 +30,7 @@ describe('Thermostat', function () {
   });
 
   it('starts with power save mode enabled', function () {
-    expect(thermostat._powerSaveMode).toBe(true);
+    expect(thermostat.isPowerSaveModeOn()).toBe(true);
   });
 
   it('has a maximum temperature of 25 degrees when in power save mode', function () {
@@ -39,12 +39,12 @@ describe('Thermostat', function () {
 
   it('has a function to disable power save mode', function () {
     thermostat.disablePowerSaveMode();
-    expect(thermostat._powerSaveMode).toBe(false)
+    expect(thermostat.isPowerSaveModeOn()).toBe(false)
   })
 
   it('has a function to enable power save mode', function () {
     thermostat.enablePowerSaveMode();
-    expect(thermostat._powerSaveMode).toBe(true)
+    expect(thermostat.isPowerSaveModeOn()).toBe(true)
   })
 
   it('has a maximum temperature of 32 degrees when not in power save mode', function () {
