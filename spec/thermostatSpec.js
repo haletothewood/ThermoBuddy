@@ -13,17 +13,20 @@ describe('Thermostat', function () {
   });
 
   it('has a function to turn the temperature up', function () {
-    thermostat.turnUp(2);
-    expect(thermostat.getTemp()).toEqual(22);
+    thermostat.turnUp();
+    expect(thermostat.getTemp()).toEqual(21);
   });
 
   it('has a function to turn the temperature down', function () {
-    thermostat.turnDown(3);
-    expect(thermostat.getTemp()).toEqual(17);
+    thermostat.turnDown();
+    expect(thermostat.getTemp()).toEqual(19);
   });
 
   it('has a minimum temperature of 10 degrees', function () {
-    expect(thermostat._minTemp).toEqual(10);
+    for (var i=0; i < 11; i++) {
+      thermostat.turnDown();
+    }
+    expect(thermostat.getTemp()).toEqual(10);
   });
 
   it('starts with power save mode enabled', function () {

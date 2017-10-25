@@ -2,7 +2,7 @@
 
 function Thermostat() {
   this._temp = 20;
-  this._minTemp = 10;
+  this.MINIMUM_TEMPERATURE = 10;
   this._maxTemp = 25;
   this._powerSaveMode = true;
 };
@@ -11,12 +11,19 @@ Thermostat.prototype.getTemp = function () {
   return this._temp;
 };
 
-Thermostat.prototype.turnUp = function (amount) {
-  this._temp += amount;
+Thermostat.prototype.isMinimumTemperature = function() {
+  return this._temp === this.MINIMUM_TEMPERATURE;
+}
+
+Thermostat.prototype.turnUp = function () {
+  this._temp += 1;
 };
 
-Thermostat.prototype.turnDown = function (amount) {
-  this._temp -= amount;
+Thermostat.prototype.turnDown = function () {
+  if (this.isMinimumTemperature()) {
+    return;
+  }
+  this._temp -= 1;
 };
 
 Thermostat.prototype.disablePowerSaveMode = function () {
