@@ -8,18 +8,18 @@ describe('Thermostat', function () {
     thermostat = new Thermostat();
   })
 
-  it('has a default temperature upon creation', function () {
-    expect(thermostat._temp).toEqual(20);
+  it('has a default temperature of 20 degrees', function () {
+    expect(thermostat.getTemp()).toEqual(20);
   });
 
   it('has a function to turn the temperature up', function () {
     thermostat.turnUp(2);
-    expect(thermostat._temp).toEqual(22);
+    expect(thermostat.getTemp()).toEqual(22);
   });
 
   it('has a function to turn the temperature down', function () {
     thermostat.turnDown(3);
-    expect(thermostat._temp).toEqual(17);
+    expect(thermostat.getTemp()).toEqual(17);
   });
 
   it('has a minimum temperature of 10 degrees', function () {
@@ -52,6 +52,6 @@ describe('Thermostat', function () {
   it('has a reset button that resets the temperature to 20 degrees', function () {
     thermostat.turnUp(4);
     thermostat.reset();
-    expect(thermostat._temp).toEqual(20);
+    expect(thermostat.getTemp()).toEqual(20);
   })
 });

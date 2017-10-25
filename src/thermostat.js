@@ -7,6 +7,10 @@ function Thermostat() {
   this._powerSaveMode = true;
 };
 
+Thermostat.prototype.getTemp = function () {
+  return this._temp;
+};
+
 Thermostat.prototype.turnUp = function (amount) {
   this._temp += amount;
 };
