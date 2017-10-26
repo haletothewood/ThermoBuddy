@@ -1,19 +1,58 @@
 body {
   background-color: rgb(103, 121, 224);
   color: white;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 18px
 }
 
 h1 {
   text-align: center;
-  padding-bottom: 20px;
+  font-size: 38px
 }
+
+h2 {
+  text-align: center;
+  font-size: 50px
+}
+
+p {
+  text-align: center;
+}
+
 div#container {
   text-align: center;
   position: center;
   border: white
 }
+
+section#city {
+  padding-top: 10px;
+}
+
+select#city {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  outline: none;
+  background-color:white;
+  border: none;
+  border-radius: 10px;
+  color: rgb(94, 93, 93);
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+}
+
 
 .switch {
   position: relative;
@@ -66,14 +105,71 @@ input:checked + .slider:before {
 
 button {
   display: inline-block;
-  color: white;
+  border: none;
+  outline: none;
+  color: rgb(94, 93, 93);
   border-radius: 34px;
   position: relative;
-  background-color: transparent;
+  background-color: white;
   width: 90px;
   height: 50px;
   left: 4px;
   bottom: 4px;
   font-size: 18px;
   border-color: white;
+}
+
+button:active {
+  background-color: white;
+  opacity: 0.9;
+  transform: translateY(1px);
+}
+
+div#power {
+  padding-bottom: 20px
+}
+
+.low-usage {
+  background-color: rgb(74, 183, 255);
+  background-image:none !important;
+  -webkit-transition: background-color 3000ms linear;
+  -moz-transition: background-color 3000ms linear;
+  -o-transition: background-color 3000ms linear;
+  -ms-transition: background-color 3000ms linear;
+  transition: background-color 3000ms linear;
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation-direction: alternate;
+  
+    -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
+  animation-iteration-count: 2;
+}
+
+.medium-usage {
+  background-color: rgb(103, 121, 224);
+  background-image:none !important;
+  -webkit-transition: background-color 3000ms linear;
+  -moz-transition: background-color 3000ms linear;
+  -o-transition: background-color 3000ms linear;
+  -ms-transition: background-color 3000ms linear;
+  transition: background-color 3000ms linear;
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation-direction: alternate;
+  
+    -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
+  animation-iteration-count: 2;
+}
+
+.high-usage {
+  background-color: rgb(189, 77, 77) !important;
+  background-image:none !important;
+-webkit-transition: background-color 5000ms linear;
+-moz-transition: background-color 5000ms linear;
+-o-transition: background-color 5000ms linear;
+-ms-transition: background-color 5000ms linear;
+transition: background-color 5000ms linear;
+  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+animation-direction: alternate;
+
+  -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
+animation-iteration-count: 2;
 }

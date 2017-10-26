@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    <title>Thermostat</title>
-    <script src="js/thermostat.js"></script>
+    <title>Thermo Buddy</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
     <link rel="stylesheet" type='text/css' href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
-    <section>
-      <h1 id="temperature">Thermo Buddy</h1>
+    <section id='controller'>
+      <h1 id="header">Thermo Buddy</h1>
+      <h2 id="temp"></h2>
       <p>
         <div id='container'>
-          <button id="turn-up">+</button>
-          <button id="turn-down">-</button>
+          <button id="turn-up">up</button>
+          <button id="turn-down">down</button>
           <button id="reset">reset</button><br><br>
-          Power saving mode is <span id="power-save-status">on</span>
-          <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-          </label>
+          <div id='power'>
+          Power saving mode is <span id="power-save-status">on</span><br>
+          </div>
+          <button id="powersave-on">PSM on</button>
+          <button id="powersave-off">PSM off</button>
         </div>
+      </p>
+    </section>
+    <section id='city'>
+      <p>Select City: 
+        <select id="city">
+          <option value="london">London</option>
+          <option value="newyork">New York</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+        Current temperature: 
+        <span id="current-temperature"></span>°C
       </p>
     </section>
   </body>

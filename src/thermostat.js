@@ -11,6 +11,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.getTemp = function () {
+  this.reduceIfOverPSMOnMax();
   return this._temp;
 };
 
@@ -65,4 +66,10 @@ Thermostat.prototype.energyUsage = function () {
     return('high-usage');
   }
   return('medium-usage');
+}
+
+Thermostat.prototype.reduceIfOverPSMOnMax = function () {
+  if (this._temp > this.MAX_TEMP_PSM_ON && this._powerSaveMode === true ) {
+    this._temp = this.MAX_TEMP_PSM_ON;
+  }
 }
