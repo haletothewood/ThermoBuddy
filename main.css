@@ -2,17 +2,30 @@ body {
   background-color: rgb(103, 121, 224);
   color: white;
   font-family: 'Quicksand', sans-serif;
-  font-size: 18px
+  font-size: 18px;
+  background-image:none !important;
+  -webkit-transition: background-color 5000ms linear;
+  -moz-transition: background-color 5000ms linear;
+  -o-transition: background-color 5000ms linear;
+  -ms-transition: background-color 5000ms linear;
+  transition: background-color 5000ms linear;
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+  animation-direction: alternate;
+  
+    -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
+  animation-iteration-count: 2;
+  margin: 0;
+  padding 0;
 }
 
 h1 {
   text-align: center;
-  font-size: 38px
+  font-size: 40px
 }
 
 h2 {
   text-align: center;
-  font-size: 50px
+  font-size: 65px
 }
 
 p {
@@ -21,7 +34,8 @@ p {
 
 div#container {
   text-align: center;
-  position: center;
+  position: relative;
+  width: 100%;
   border: white
 }
 
@@ -30,14 +44,6 @@ section#city {
 }
 
 select#city {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -webkit-padding-end: 20px;
-  -moz-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -moz-padding-start: 2px;
   outline: none;
   background-color:white;
   border: none;
@@ -51,56 +57,6 @@ select#city {
   text-overflow: ellipsis;
   text-align: center;
   white-space: nowrap;
-}
-
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  border-radius: 34px;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(145, 145, 145);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  border-radius: 50%;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: rgb(192, 188, 255);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px rgb(170, 172, 255)
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
 }
 
 button {
@@ -117,6 +73,17 @@ button {
   bottom: 4px;
   font-size: 18px;
   border-color: white;
+  margin-right: 10px;
+}
+
+button#turn-up {
+  border-radius: 50%;
+  width: 50px;
+}
+
+button#turn-down {
+  border-radius: 50%;
+  width: 50px;
 }
 
 button:active {
@@ -131,45 +98,12 @@ div#power {
 
 .low-usage {
   background-color: rgb(74, 183, 255);
-  background-image:none !important;
-  -webkit-transition: background-color 3000ms linear;
-  -moz-transition: background-color 3000ms linear;
-  -o-transition: background-color 3000ms linear;
-  -ms-transition: background-color 3000ms linear;
-  transition: background-color 3000ms linear;
-    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
-  animation-direction: alternate;
-  
-    -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
-  animation-iteration-count: 2;
 }
 
 .medium-usage {
   background-color: rgb(103, 121, 224);
-  background-image:none !important;
-  -webkit-transition: background-color 3000ms linear;
-  -moz-transition: background-color 3000ms linear;
-  -o-transition: background-color 3000ms linear;
-  -ms-transition: background-color 3000ms linear;
-  transition: background-color 3000ms linear;
-    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
-  animation-direction: alternate;
-  
-    -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
-  animation-iteration-count: 2;
 }
 
 .high-usage {
-  background-color: rgb(189, 77, 77) !important;
-  background-image:none !important;
--webkit-transition: background-color 5000ms linear;
--moz-transition: background-color 5000ms linear;
--o-transition: background-color 5000ms linear;
--ms-transition: background-color 5000ms linear;
-transition: background-color 5000ms linear;
-  -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
-animation-direction: alternate;
-
-  -webkit-animation-iteration-count: 2; /* Chrome, Safari, Opera */
-animation-iteration-count: 2;
+  background-color: rgb(189, 77, 77);
 }
