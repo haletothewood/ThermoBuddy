@@ -35,16 +35,11 @@
     </section>
   </p>
   <section id='current_city'>
-    <p>Select City:
-      <select id="city">
-        <option value="london">London</option>
-        <option value="newyork">New York</option>
-        <option value="paris">Paris</option>
-        <option value="tokyo">Tokyo</option>
-      </select>
-      Current temperature:
-      <span id="current-temperature"></span>°C
-    </p>
+    <form id="select-city">
+      <input id="current-city" type="text" placeholder="Enter a city"></input>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+    <span id="current-temperature"></span>
   </section>
 </body>
 

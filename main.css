@@ -30,7 +30,9 @@ section#controller {
 }
 
 section#current_city {
-  padding-top: 10px;
+  padding-top: 5px;
+  text-align: center;
+  position: relative;
 }
 
 select#city {
@@ -51,7 +53,7 @@ select#city {
 
 button {
   display: inline-block;
-  border: solid 2px white;
+  border: solid 1.5px white;
   outline: none;
   color: white;
   border-radius: 34px;
@@ -74,6 +76,14 @@ button#turn-up {
 button#turn-down {
   border-radius: 50%;
   width: 50px;
+}
+
+button#submit {
+  top: 0px;
+  position: relative;
+  /* margin-top: 5px; */
+  height: 32px;
+  font-size: 12px;
 }
 
 button:active {
@@ -108,6 +118,24 @@ span#temp {
   font-size: 100px;
   line-height: 200%
 }
+
+input[type=text] {
+  text-align: center;
+  font-size: 12px;
+  width: 115px;
+  height: 30px;
+  border: 1px;
+  border-radius: 34px;
+  border: 1px
+  solid rgb(255, 255, 255); 
+  vertical-align: bottom
+}
+
+input[type=text]:focus {
+  border-color:rgb(151, 151, 151);
+  outline: none;
+}
+
 
 .low-usage {
   background-color: rgb(74, 183, 255);
