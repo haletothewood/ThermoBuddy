@@ -15,11 +15,11 @@ Thermostat.prototype.getTemp = function () {
   return this._temp;
 };
 
-Thermostat.prototype.isMinimumTemperature = function() {
+Thermostat.prototype.isMinimumTemperature = function () {
   return this._temp === this.MINIMUM_TEMPERATURE;
 }
 
-Thermostat.prototype.isMaximumTemperature = function() {
+Thermostat.prototype.isMaximumTemperature = function () {
   if (this.isPowerSaveModeOn()) {
     return this._temp === this.MAX_TEMP_PSM_ON;
   }
@@ -40,7 +40,7 @@ Thermostat.prototype.turnDown = function () {
   this._temp -= 1;
 };
 
-Thermostat.prototype.isPowerSaveModeOn = function() {
+Thermostat.prototype.isPowerSaveModeOn = function () {
   return this._powerSaveMode === true;
 }
 
@@ -60,16 +60,16 @@ Thermostat.prototype.reset = function () {
 
 Thermostat.prototype.energyUsage = function () {
   if (this.getTemp() < this.MEDIUM_ENERGY_USAGE_LIMIT) {
-    return('low-usage');
-  } 
-  if (this.getTemp() > this.MAX_TEMP_PSM_ON) {
-    return('high-usage');
+    return ('low-usage');
   }
-  return('medium-usage');
+  if (this.getTemp() > this.MAX_TEMP_PSM_ON) {
+    return ('high-usage');
+  }
+  return ('medium-usage');
 }
 
 Thermostat.prototype.reduceIfOverPSMOnMax = function () {
-  if (this._temp > this.MAX_TEMP_PSM_ON && this._powerSaveMode === true ) {
+  if (this._temp > this.MAX_TEMP_PSM_ON && this._powerSaveMode === true) {
     this._temp = this.MAX_TEMP_PSM_ON;
   }
 }
