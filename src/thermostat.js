@@ -46,7 +46,7 @@ Thermostat.prototype.isPowerSaveModeOn = function () {
 
 Thermostat.prototype.disablePowerSaveMode = function () {
   this._maxTemp = 32;
-  this._powerSaveMode;
+  this._powerSaveMode = false;
 };
 
 Thermostat.prototype.enablePowerSaveMode = function () {
