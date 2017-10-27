@@ -9,22 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   </head>
   <body>
-    <section id='controller'>
-      <h1 id="header">Thermo Buddy</h1>
-      <h2 id="temp"></h2>
-      <p>
+    <p>
+      <section id='controller'>
+        <h1 id="header">Thermo Buddy</h1>
+        <div id='temp-box'>
+          <span id="temp"></span>
+        </div>
         <div id='container'>
           <button id="turn-up">+</button>
           <button id="turn-down">-</button>
           <button id="reset">reset</button><br><br>
           <div id='power'>
-          Power saving mode is <span id="power-save-status">on</span><br>
+            Power saving mode is <span id="power-save-status">on</span><br>
           </div>
           <button id="powersave-on">PSM on</button>
+          <div id='space'></div>
           <button id="powersave-off">PSM off</button>
         </div>
-      </p>
-    </section>
+      </section>
+    </p>
     <section id='current_city'>
       <p>Select City: 
         <select id="city">
